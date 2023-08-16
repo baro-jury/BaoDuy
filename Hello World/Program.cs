@@ -3,8 +3,8 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, world!");
-            Console.WriteLine("Nguyen An Loc");
+            DateTime localDate = Datetime.Now;
+            Console.WriteLine("Date time now is: " + localDate);
         }
     }
 }
