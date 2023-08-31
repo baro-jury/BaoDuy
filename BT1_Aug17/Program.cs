@@ -41,9 +41,9 @@ class Program
 
     public static void ConvertUSDToVND()
     {
-        int rate = 24085;
+        float rate = 24085;
         Console.Write("Enter USD: ");
-        int usd = int.Parse(Console.ReadLine());
+        float usd = float.Parse(Console.ReadLine());
         float vnd = usd * rate;
         Console.WriteLine("The corresponding VND is: " + vnd);
     }
