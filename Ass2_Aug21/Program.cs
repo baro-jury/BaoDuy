@@ -65,9 +65,13 @@
             int number = int.Parse(Console.ReadLine());
             Console.WriteLine(ConvertNumberToWords(number));
         }
+        catch (ArgumentOutOfRangeException aoore)
+        {
+            Console.WriteLine("Out of ability");
+        }
         catch (Exception ex)
         {
-            Console.WriteLine(ex.Message);
+            Console.Error.WriteLine(ex.Message);
         }
     }
 
@@ -79,7 +83,7 @@
 
         if (number < 0 || number > 999)
         {
-            throw new ArgumentOutOfRangeException("Out of ability");
+            throw new ArgumentOutOfRangeException();
         }
 
         string result = "";
