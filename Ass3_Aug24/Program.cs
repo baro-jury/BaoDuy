@@ -4,16 +4,14 @@
     {
         DesignMenu();
         Console.WriteLine("-------------------------------");
-        //ResolveQuadraticEquation();
+        CheckForPrime();
         Console.WriteLine("-------------------------------");
-        //CalculateBodyMassIndex();
-        Console.WriteLine("-------------------------------");
-        //ReadNumbersIntoWords();
+        ShowGeometry();
     }
 
     public static void DesignMenu()
     {
-        while(true)
+        while (true)
         {
             int choice;
             Console.WriteLine("====== Menu ======");
@@ -64,5 +62,34 @@
                     break;
             }
         }
+    }
+
+    public static void CheckForPrime()
+    {
+        int number;
+        Console.Write("Enter a number: ");
+        number = int.Parse(Console.ReadLine());
+        if (number < 2) Console.WriteLine(number + " is not a prime");
+        else
+        {
+            int i = 2;
+            bool isPrime = true;
+            while (i <= Math.Sqrt(number))
+            {
+                if (number % i == 0)
+                {
+                    isPrime = false;
+                    break;
+                }
+                i++;
+            }
+            if (isPrime) Console.WriteLine(number + " is a prime");
+            else Console.WriteLine(number + " is not a prime");
+        }
+    }
+
+    public static void ShowGeometry()
+    {
+        
     }
 }
