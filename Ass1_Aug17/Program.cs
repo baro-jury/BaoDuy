@@ -1,7 +1,4 @@
-﻿using System.Runtime.Intrinsics.X86;
-using System.Xml.Linq;
-
-class Program
+﻿class Program
 {
     private static void Main(string[] args)
     {
