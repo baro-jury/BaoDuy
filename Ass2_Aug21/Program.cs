@@ -67,19 +67,37 @@
             Console.Write("c = ");
             double c = Convert.ToDouble(Console.ReadLine());
 
-            if ((a + b + c) == 0) Console.WriteLine("The solution is x1 = {0}, x2 = {1}", 1, c / a);
-            else if ((a - b + c) == 0) Console.WriteLine("The solution is x1 = {0}, x2 = {1}", -1, -c / a);
-            else
+            switch (a)
             {
-                double delta = Math.Pow(b, 2) - 4 * a * c;
-                if (delta > 0)
-                {
-                    Console.WriteLine("The solution is x1 = {0}, x2 = {1}", (-b + Math.Sqrt(delta)) / (2 * a), (-b - Math.Sqrt(delta)) / (2 * a));
-                }
-                else
-                {
-                    Console.WriteLine(delta == 0 ? "The solution is x1 = x2 = " + (-b / (2 * a)) : "No solution!");
-                }
+                case 0:
+                    if (b != 0)
+                    {
+                        if (c == 0) Console.WriteLine("The solution is x = {0}", 0);
+                        else Console.WriteLine("The solution is x = {0}", -c / b);
+                    }
+                    else
+                    {
+                        Console.WriteLine(c == 0 ? "The solution is all x!" : "No solution!");
+                    }
+                    break;
+                default:
+                    if ((a + b + c) == 0) Console.WriteLine("The solution is x1 = {0}, x2 = {1}", 1, c / a);
+                    else if ((a - b + c) == 0) Console.WriteLine("The solution is x1 = {0}, x2 = {1}", -1, -c / a);
+                    else
+                    {
+                        double delta = Math.Pow(b, 2) - 4 * a * c;
+                        if (delta > 0)
+                        {
+                            double x1 = (-b + Math.Sqrt(delta)) / (2 * a);
+                            double x2 = (-b - Math.Sqrt(delta)) / (2 * a);
+                            Console.WriteLine("The solution is x1 = {0}, x2 = {1}", x1, x2);
+                        }
+                        else
+                        {
+                            Console.WriteLine(delta == 0 ? "The solution is x1 = x2 = " + (-b / (2 * a)) : "No solution!");
+                        }
+                    }
+                    break;
             }
         }
         catch (Exception ex)
