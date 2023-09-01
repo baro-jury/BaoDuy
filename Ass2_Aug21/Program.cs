@@ -74,11 +74,11 @@
                 double delta = Math.Pow(b, 2) - 4 * a * c;
                 if (delta > 0)
                 {
-                    Console.WriteLine("The solution is x1 = {0}, x2 = {1}", (-b + Math.Sqrt(delta)) / 2 * a, (-b - Math.Sqrt(delta)) / 2 * a);
+                    Console.WriteLine("The solution is x1 = {0}, x2 = {1}", (-b + Math.Sqrt(delta)) / (2 * a), (-b - Math.Sqrt(delta)) / (2 * a));
                 }
                 else
                 {
-                    Console.WriteLine(delta == 0 ? "The solution is x1 = x2 = " + (-b / 2 * a) : "No solution!");
+                    Console.WriteLine(delta == 0 ? "The solution is x1 = x2 = " + (-b / (2 * a)) : "No solution!");
                 }
             }
         }
