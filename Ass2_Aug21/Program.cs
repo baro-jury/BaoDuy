@@ -4,6 +4,8 @@
     {
         ResolveLinearEquation();
         Console.WriteLine("-------------------------------");
+        ResolveQuadraticEquation();
+        Console.WriteLine("-------------------------------");
         CalculateBodyMassIndex();
         Console.WriteLine("-------------------------------");
         ReadNumbersIntoWords();
@@ -45,6 +47,39 @@
             else
             {
                 Console.WriteLine(b == c ? "The solution is all x!" : "No solution!");
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+    }
+
+    public static void ResolveQuadraticEquation()
+    {
+        try
+        {
+            Console.WriteLine("Enter constants for an equation as 'a * x^2 + b * x + c = 0'");
+            Console.Write("a = ");
+            double a = Convert.ToDouble(Console.ReadLine());
+            Console.Write("b = ");
+            double b = Convert.ToDouble(Console.ReadLine());
+            Console.Write("c = ");
+            double c = Convert.ToDouble(Console.ReadLine());
+
+            if ((a + b + c) == 0) Console.WriteLine("The solution is x1 = {0}, x2 = {1}", 1, c / a);
+            else if ((a - b + c) == 0) Console.WriteLine("The solution is x1 = {0}, x2 = {1}", -1, -c / a);
+            else
+            {
+                double delta = Math.Pow(b, 2) - 4 * a * c;
+                if (delta > 0)
+                {
+                    Console.WriteLine("The solution is x1 = {0}, x2 = {1}", (-b + Math.Sqrt(delta)) / 2 * a, (-b - Math.Sqrt(delta)) / 2 * a);
+                }
+                else
+                {
+                    Console.WriteLine(delta == 0 ? "The solution is x1 = x2 = " + (-b / 2 * a) : "No solution!");
+                }
             }
         }
         catch (Exception ex)
