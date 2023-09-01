@@ -2,6 +2,109 @@
 {
     private static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
+        ResolveLinearEquation();
+        Console.WriteLine("-------------------------------");
+        CalculateBodyMassIndex();
+        Console.WriteLine("-------------------------------");
+        ReadNumbersIntoWords();
+    }
+
+    public static void ResolveLinearEquation()
+    {
+        try
+        {
+            Console.WriteLine("Enter constants for an equation as 'a * x + b = 0'");
+            Console.Write("a = ");
+            double a = Convert.ToDouble(Console.ReadLine());
+            Console.Write("b = ");
+            double b = Convert.ToDouble(Console.ReadLine());
+            if (a != 0)
+            {
+                Console.WriteLine("The solution for '{0} * x + {1} = 0' is {2}", a, b, -b / a);
+            }
+            else
+            {
+                Console.WriteLine(b == 0 ? "The solution is all x!" : "No solution!");
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+    }
+
+    public static void CalculateBodyMassIndex()
+    {
+        try
+        {
+            Console.Write("Enter your height (m): ");
+            double height = float.Parse(Console.ReadLine());
+            Console.Write("Enter your weight (kg): ");
+            double weight = float.Parse(Console.ReadLine());
+            double bmi = weight / Math.Pow(height, 2);
+            bmi = Math.Round(bmi, 1);
+            Console.WriteLine("BMI: " + bmi);
+
+            if (bmi < 18.5) Console.WriteLine("Underweight");
+            else if (bmi < 25) Console.WriteLine("Normal");
+            else if (bmi < 30) Console.WriteLine("Overweight");
+            else Console.WriteLine("Obese");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+
+    }
+
+    public static void ReadNumbersIntoWords()
+    {
+        try
+        {
+            Console.Write("Enter a number: ");
+            int number = int.Parse(Console.ReadLine());
+            Console.WriteLine(ConvertNumberToWords(number));
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+    }
+
+    public static string ConvertNumberToWords(int number)
+    {
+        string[] ones = { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten",
+                             "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen" };
+        string[] tens = { "", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety" };
+
+        if (number < 0 || number > 999)
+        {
+            throw new ArgumentOutOfRangeException("Out of ability");
+        }
+
+        string result = "";
+        switch (number / 100)
+        {
+            case 0:
+                if (number < 20)
+                {
+                    result = ones[number];
+                }
+                else
+                {
+                    result = tens[number / 10]
+                        + (number % 10 != 0 ? " " + ones[number % 10] : "");
+                }
+                break;
+            case 1:
+                result = ones[number / 100] + " hundred"
+                    + (number % 100 != 0 ? " and " + ConvertNumberToWords(number % 100) : "");
+                break;
+            default:
+                result = ones[number / 100] + " hundreds"
+                    + (number % 100 != 0 ? " and " + ConvertNumberToWords(number % 100) : "");
+                break;
+        }
+        return result;
     }
 }
