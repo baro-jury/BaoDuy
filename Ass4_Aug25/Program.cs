@@ -11,6 +11,8 @@ class Program
         Console.WriteLine("-------------------------------");
         FindMaxValueInArray();
         Console.WriteLine("-------------------------------");
+        Minesweeper.DoMin();
+        Console.WriteLine("-------------------------------");
         AddElementsToArray();
         Console.WriteLine("-------------------------------");
         FindMaxValueInTwoDimensionalArray();
