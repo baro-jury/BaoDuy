@@ -1,6 +1,4 @@
 ﻿using Ass4_Aug25;
-using System.Text.RegularExpressions;
-using System.Xml.Linq;
 
 class Program
 {
@@ -11,6 +9,8 @@ class Program
         FindValueInArray();
         Console.WriteLine("-------------------------------");
         FindMaxValueInArray();
+        Console.WriteLine("-------------------------------");
+        AddElementsToArray();
     }
 
     public static void SumTheElementsOfAnArray()
@@ -103,42 +103,49 @@ class Program
 
     public static void AddElementsToArray()
     {
-        int size;
-        do
-        {
-            Console.Write("Enter a size: ");
-            size = GetInteger(1, Int32.MaxValue, "Enter again!");
-            if (size > 20)
-                Console.WriteLine("Size should not exceed 20");
-        } while (size > 20);
+        #region Khai báo và khởi tạo mảng số nguyên gồm N phần tử cho trước.
 
-        int[] array = new int[size];
+        Console.Write("Enter a size of array: ");
+        int n = GetInteger(1, Int32.MaxValue, "Enter again!");
+        int[] array = new int[n];
         int i = 0;
         while (i < array.Length)
         {
             Console.Write("- Enter element " + (i + 1) + ": ");
             array[i] = GetInteger(Int32.MinValue, Int32.MaxValue, "Enter again!");
             i++;
-        }
+        } 
 
-        Console.WriteLine("\n=> Property list: ");
+        Console.WriteLine("\n=> Initial element list: ");
         for (int j = 0; j < array.Length; j++)
         {
             Console.Write(array[j] + "\t");
         }
-        Console.WriteLine();
+        Console.WriteLine("\n");
+        #endregion
 
-        int max = array[0];
-        int index = 1;
+        #region Thực hiện chèn phần tử X ở vị trí index vào mảng.
+
+        Console.Write("Enter the element to add: ");
+        int x = GetInteger(Int32.MinValue, Int32.MaxValue, "Enter again!");
+        Console.Write("Enter the index to add (1 - " + (n - 2) + "): ");
+        int index = GetInteger(1, n - 2, "Enter again!");
+
+        Array.Resize(ref array, array.Length + 1);
+        for (int j = array.Length - 1; j > index; j--)
+        {
+            array[j] = array[j - 1];
+        }
+        array[index] = x;
+
+        Console.WriteLine("=> Element list after adding: ");
         for (int j = 0; j < array.Length; j++)
         {
-            if (array[j] > max)
-            {
-                max = array[j];
-                index = j + 1;
-            }
+            Console.Write(array[j] + "\t");
         }
-        Console.WriteLine("\n=> The largest property value in the list is " + max + ", at position " + index);
+        Console.WriteLine(); 
+        #endregion
+
     }
 
     #region Validation
