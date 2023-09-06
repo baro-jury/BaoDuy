@@ -1,0 +1,15 @@
+D:\BaoDuy\Unity\_CodeGym\BaoDuy\Ass4_Aug25\bin\Debug\net6.0\Ass4_Aug25.exe
+D:\BaoDuy\Unity\_CodeGym\BaoDuy\Ass4_Aug25\bin\Debug\net6.0\Ass4_Aug25.deps.json
+D:\BaoDuy\Unity\_CodeGym\BaoDuy\Ass4_Aug25\bin\Debug\net6.0\Ass4_Aug25.runtimeconfig.json
+D:\BaoDuy\Unity\_CodeGym\BaoDuy\Ass4_Aug25\bin\Debug\net6.0\Ass4_Aug25.dll
+D:\BaoDuy\Unity\_CodeGym\BaoDuy\Ass4_Aug25\bin\Debug\net6.0\Ass4_Aug25.pdb
+D:\BaoDuy\Unity\_CodeGym\BaoDuy\Ass4_Aug25\obj\Debug\net6.0\Ass4_Aug25.csproj.AssemblyReference.cache
+D:\BaoDuy\Unity\_CodeGym\BaoDuy\Ass4_Aug25\obj\Debug\net6.0\Ass4_Aug25.GeneratedMSBuildEditorConfig.editorconfig
+D:\BaoDuy\Unity\_CodeGym\BaoDuy\Ass4_Aug25\obj\Debug\net6.0\Ass4_Aug25.AssemblyInfoInputs.cache
+D:\BaoDuy\Unity\_CodeGym\BaoDuy\Ass4_Aug25\obj\Debug\net6.0\Ass4_Aug25.AssemblyInfo.cs
+D:\BaoDuy\Unity\_CodeGym\BaoDuy\Ass4_Aug25\obj\Debug\net6.0\Ass4_Aug25.csproj.CoreCompileInputs.cache
+D:\BaoDuy\Unity\_CodeGym\BaoDuy\Ass4_Aug25\obj\Debug\net6.0\Ass4_Aug25.dll
+D:\BaoDuy\Unity\_CodeGym\BaoDuy\Ass4_Aug25\obj\Debug\net6.0\refint\Ass4_Aug25.dll
+D:\BaoDuy\Unity\_CodeGym\BaoDuy\Ass4_Aug25\obj\Debug\net6.0\Ass4_Aug25.pdb
+D:\BaoDuy\Unity\_CodeGym\BaoDuy\Ass4_Aug25\obj\Debug\net6.0\Ass4_Aug25.genruntimeconfig.cache
+D:\BaoDuy\Unity\_CodeGym\BaoDuy\Ass4_Aug25\obj\Debug\net6.0\ref\Ass4_Aug25.dll
