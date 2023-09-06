@@ -231,6 +231,7 @@
         }
     }
 
+    #region Validation
     private static int GetInteger(int min, int max, string errorMsg)
     {
         while (true)
@@ -257,5 +258,6 @@
                 Console.ResetColor();
             }
         }
-    }
+    } 
+    #endregion
 }
