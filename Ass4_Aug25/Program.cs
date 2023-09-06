@@ -1,5 +1,6 @@
 ﻿using Ass4_Aug25;
 using System.Text.RegularExpressions;
+using System.Xml.Linq;
 
 class Program
 {
@@ -46,6 +47,61 @@ class Program
     }
 
     public static void FindMaxValueInArray()
+    {
+        int size;
+        do
+        {
+            Console.Write("Enter a size: ");
+            size = GetInteger(1, Int32.MaxValue, "Enter again!");
+            if (size > 20)
+                Console.WriteLine("Size should not exceed 20");
+        } while (size > 20);
+
+        int[] array = new int[size];
+        int i = 0;
+        while (i < array.Length)
+        {
+            Console.Write("- Enter element " + (i + 1) + ": ");
+            array[i] = GetInteger(Int32.MinValue, Int32.MaxValue, "Enter again!");
+            i++;
+        }
+
+        Console.WriteLine("\n=> Property list: ");
+        for (int j = 0; j < array.Length; j++)
+        {
+            Console.Write(array[j] + "\t");
+        }
+        Console.WriteLine();
+
+        int max = array[0], maxOdd = 0;
+        int index = 1, indexOdd = 1;
+        for (int j = 0; j < array.Length; j++)
+        {
+            if (array[j] % 2 != 0)
+            {
+                maxOdd = array[j];
+                indexOdd = j + 1;
+                break;
+            }
+        }
+        for (int j = 0; j < array.Length; j++)
+        {
+            if (array[j] > max)
+            {
+                max = array[j];
+                index = j + 1;
+            }
+            if (array[j] > maxOdd && array[j] % 2 != 0)
+            {
+                maxOdd = array[j];
+                indexOdd = j + 1;
+            }
+        }
+        Console.WriteLine("\n=> The largest property value in the list is " + max + " at position " + index
+            + ",\nand the odd largest property value in the list is " + maxOdd + " at position " + indexOdd);
+    }
+
+    public static void AddElementsToArray()
     {
         int size;
         do
