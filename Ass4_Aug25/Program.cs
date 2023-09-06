@@ -52,7 +52,7 @@ class Program
         do
         {
             Console.Write("Enter a size: ");
-            size = GetInteger(1, Int32.MaxValue, "Enter again!");
+            size = GetInteger(1, int.MaxValue, "Enter again!");
             if (size > 20)
                 Console.WriteLine("Size should not exceed 20");
         } while (size > 20);
@@ -62,7 +62,7 @@ class Program
         while (i < array.Length)
         {
             Console.Write("- Enter element " + (i + 1) + ": ");
-            array[i] = GetInteger(Int32.MinValue, Int32.MaxValue, "Enter again!");
+            array[i] = GetInteger(int.MinValue, int.MaxValue, "Enter again!");
             i++;
         }
 
@@ -106,13 +106,13 @@ class Program
         #region Khai báo và khởi tạo mảng số nguyên gồm N phần tử cho trước.
 
         Console.Write("Enter a size of array: ");
-        int n = GetInteger(1, Int32.MaxValue, "Enter again!");
+        int n = GetInteger(1, int.MaxValue, "Enter again!");
         int[] array = new int[n];
         int i = 0;
         while (i < array.Length)
         {
             Console.Write("- Enter element " + (i + 1) + ": ");
-            array[i] = GetInteger(Int32.MinValue, Int32.MaxValue, "Enter again!");
+            array[i] = GetInteger(int.MinValue, int.MaxValue, "Enter again!");
             i++;
         } 
 
@@ -127,7 +127,7 @@ class Program
         #region Thực hiện chèn phần tử X ở vị trí index vào mảng.
 
         Console.Write("Enter the element to add: ");
-        int x = GetInteger(Int32.MinValue, Int32.MaxValue, "Enter again!");
+        int x = GetInteger(int.MinValue, int.MaxValue, "Enter again!");
         Console.Write("Enter the index to add (1 - " + (n - 2) + "): ");
         int index = GetInteger(1, n - 2, "Enter again!");
 
@@ -145,7 +145,11 @@ class Program
         }
         Console.WriteLine(); 
         #endregion
+    }
 
+    public static void FindMaxValueInTwoDimensionalArray()
+    {
+        
     }
 
     #region Validation
