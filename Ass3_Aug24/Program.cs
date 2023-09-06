@@ -69,7 +69,7 @@
     {
         int number;
         Console.Write("Enter a number: ");
-        number = GetInteger(Int32.MinValue, Int32.MaxValue, "Enter again!");
+        number = GetInteger(int.MinValue, int.MaxValue, "Enter again!");
         if (number < 2) Console.WriteLine(number + " is not a prime");
         else
         {
@@ -108,7 +108,7 @@
                 case 1:
                     Console.WriteLine("\nPrint the rectangle");
                     Console.Write("Length = ");
-                    int length = GetInteger(2, Int32.MaxValue, "Enter again!");
+                    int length = GetInteger(2, int.MaxValue, "Enter again!");
                     Console.Write("Width = ");
                     int width = GetInteger(1, length - 1, "Enter again!");
                     Console.WriteLine();
@@ -134,7 +134,7 @@
                         "Type of square triangle = ");
                     int type = GetInteger(1, 4, "Enter again!");
                     Console.Write("Height = ");
-                    int height = GetInteger(1, Int32.MaxValue, "Enter again!");
+                    int height = GetInteger(1, int.MaxValue, "Enter again!");
                     Console.WriteLine();
                     switch (type)
                     {
@@ -199,7 +199,7 @@
                 case 3:
                     Console.WriteLine("\nPrint isosceles triangle");
                     Console.Write("Height = ");
-                    height = GetInteger(1, Int32.MaxValue, "Enter again!");
+                    height = GetInteger(1, int.MaxValue, "Enter again!");
                     Console.WriteLine();
                     for (int i = 1; i <= height; i++)
                     //for (int i = height; i >= 1; i--)
