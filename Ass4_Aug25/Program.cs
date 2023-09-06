@@ -86,33 +86,6 @@ class Program
     }
 
     #region Validation
-    private static string GetString(string regex, string errorMsg)
-    {
-        while (true)
-        {
-            try
-            {
-                string str = Console.ReadLine();
-                if (Regex.IsMatch(str, regex))
-                {
-                    return str;
-                }
-            }
-            catch (ArgumentOutOfRangeException aoore)
-            {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("Out of range!");
-                Console.ResetColor();
-            }
-            catch (Exception ex)
-            {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine(errorMsg);
-                Console.ResetColor();
-            }
-        }
-    }
-
     private static int GetInteger(int min, int max, string errorMsg)
     {
         while (true)
