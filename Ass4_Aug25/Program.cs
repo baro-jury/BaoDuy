@@ -141,14 +141,14 @@ class Program
         int index = GetInteger(1, n - 2, "Enter again!");
 
         Array.Resize(ref array, n + 1);
-        for (int i = n - 1; i > index; i--)
+        for (int i = array.Length - 1; i > index; i--)
         {
-            array[i] = array[n - 1];
+            array[i] = array[i - 1];
         }
         array[index] = x;
 
         Console.WriteLine("=> Element list after adding: ");
-        for (int i = 0; i < n; i++)
+        for (int i = 0; i < array.Length; i++)
         {
             Console.Write(array[i] + "\t");
         }
