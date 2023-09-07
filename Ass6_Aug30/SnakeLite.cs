@@ -55,7 +55,7 @@ namespace Ass6_Aug30
             Console.Write(' ');
         }
 
-        public void ControlSnake(ref int snakeCol, ref int snakeRow, int heightInside)
+        public void ControlSnake(ref int snakeCol, ref int snakeRow)
         {
             int tempCol = 0, tempRow = 0;
 
@@ -88,7 +88,6 @@ namespace Ass6_Aug30
             snakeCol = tempCol;
             snakeRow = tempRow;
             SpawnSnake(snakeCol, snakeRow);
-            Console.SetCursorPosition(0, heightInside + 2);
         }
 
         public void SpawnFood((int, int) foodPosition)

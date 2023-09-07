@@ -29,7 +29,8 @@ class Program
         {
             Console.Title = "Snake Game Score: " + snakeLite.snake.Score;
 
-            snakeLite.ControlSnake(ref snakePosCol, ref snakePosRow, heightInside);
+            snakeLite.ControlSnake(ref snakePosCol, ref snakePosRow);
+            Console.SetCursorPosition(0, heightInside + 2);
 
             if (snakePosCol == foodPos.Item1 && snakePosRow == foodPos.Item2)
             {
