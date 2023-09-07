@@ -103,19 +103,18 @@ class Program
         #region Nếu phần tử X có trong mảng, thực hiện xoá X ở vị trí index khỏi mảng
         Console.Write("Enter the element to remove: ");
         int x = GetInteger(int.MinValue, int.MaxValue, "Enter again!");
-        int index = 0;
-        bool isExisted = false;
+        int index = -1;
         for (int i = 0; i < n; i++)
         {
             if (array[i] == x)
             {
-                isExisted = true;
                 index = i;
                 break;
             }
         }
 
-        if (isExisted)
+        if (index < 0) Console.WriteLine("=> This element is not existed!");
+        else
         {
             for (int i = index; i < (n - 1); i++)
             {
@@ -129,10 +128,6 @@ class Program
                 Console.Write(array[i] + "\t");
             }
             Console.WriteLine();
-        }
-        else
-        {
-            Console.WriteLine("=> This element is not existed!");
         }
         #endregion
     }
