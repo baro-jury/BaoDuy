@@ -9,9 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ass2_Aug21", "Ass2_Aug21\As
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ass3_Aug24", "Ass3_Aug24\Ass3_Aug24.csproj", "{76651EF6-FEAA-42FD-8E76-04114A5F3891}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ass4_Aug25", "Ass4_Aug25\Ass4_Aug25.csproj", "{0572BE7C-61A9-4A25-A13B-DD6BF64C5C5D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ass4_Aug25", "Ass4_Aug25\Ass4_Aug25.csproj", "{0572BE7C-61A9-4A25-A13B-DD6BF64C5C5D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ass5_Aug28", "Ass5_Aug28\Ass5_Aug28.csproj", "{C1A92E64-5029-4459-8B03-DD9923DB8C83}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ass5_Aug28", "Ass5_Aug28\Ass5_Aug28.csproj", "{C1A92E64-5029-4459-8B03-DD9923DB8C83}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ass6_Aug30", "Ass6_Sep04\Ass6_Aug30.csproj", "{D67F2142-8663-4E2F-B7F5-3DF43F245FE5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{C1A92E64-5029-4459-8B03-DD9923DB8C83}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C1A92E64-5029-4459-8B03-DD9923DB8C83}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C1A92E64-5029-4459-8B03-DD9923DB8C83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D67F2142-8663-4E2F-B7F5-3DF43F245FE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D67F2142-8663-4E2F-B7F5-3DF43F245FE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D67F2142-8663-4E2F-B7F5-3DF43F245FE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D67F2142-8663-4E2F-B7F5-3DF43F245FE5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
