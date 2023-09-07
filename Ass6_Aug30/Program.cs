@@ -48,13 +48,15 @@ class Program
 
             if (snakePosRow > heightInside || snakePosRow < 1 || snakePosCol > widthInside || snakePosCol < 1)
             {
+                Console.ResetColor();
+                Console.SetCursorPosition(0, heightInside + 2);
+                Console.WriteLine("\n=> Game Over!");
+
                 inGame = false;
             }
         }
 
-        Console.ResetColor();
-        Console.SetCursorPosition(0, heightInside + 2);
-        Console.WriteLine("\n=> Game Over!");
+        
     }
 
     #region Validation

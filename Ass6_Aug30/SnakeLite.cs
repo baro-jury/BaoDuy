@@ -102,12 +102,12 @@ namespace Ass6_Aug30
         public (int, int) RandomFoodPosition(int widthInside, int heightInside, int snakeCol, int snakeRow)
         //index cot, index hang
         {
-            (int, int) foodPosition = (1, 1);
-            while (foodPosition.Item1 == snakeCol && foodPosition.Item2 == snakeRow)
+            (int, int) foodPosition;
+            do
             {
                 foodPosition.Item1 = random.Next(1, widthInside);
                 foodPosition.Item2 = random.Next(1, heightInside);
-            }
+            } while (foodPosition.Item1 == snakeCol && foodPosition.Item2 == snakeRow);
             return foodPosition;
         }
 
