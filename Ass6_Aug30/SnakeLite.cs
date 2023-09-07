@@ -3,48 +3,114 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Formats.Asn1.AsnWriter;
 
 namespace Ass6_Aug30
 {
     class SnakeLite
     {
-        public void CreateMap(int width, int height)
-        {
+        Random random = new Random();
+        public Snake snake = new Snake();
 
-        }
-
-        private void SpawnMapWall(int width, int height) 
+        public void CreateMap(int widthInside, int heightInside)
         {
             Console.Clear();
-            width = 20;
-            height = 8;
 
-            //Ve hang tren cung
+            string horizontalLine = "";
+            for (int i = 0; i <= (widthInside + 1); i++)
+            {
+                horizontalLine += "#";
+            }
+
             Console.BackgroundColor = ConsoleColor.Red;
-            for (int i = 0; i < width; i++)
-            {
-                Console.SetCursorPosition(i, 0);
-                Console.Write('#');
-            }
-            //Ve hang duoi cung
-            for (int i = 1; i < width; i++)
-            {
-                Console.SetCursorPosition(i, height);
-                Console.Write('#');
-            }
+
+            //Ve hang tren va duoi
+            Console.SetCursorPosition(0, 0);
+            Console.Write(horizontalLine);
+            Console.SetCursorPosition(0, heightInside + 1);
+            Console.Write(horizontalLine);
+
             //Ve hang ben trai
-            for (int i = 1; i < height + 1; i++)
+            for (int i = 1; i <= heightInside; i++)
             {
                 Console.SetCursorPosition(0, i);
                 Console.Write('#');
             }
-            for (int i = 1; i < height + 1; i++)
+
+            //Ve hang ben phai
+            for (int i = 1; i <= heightInside; i++)
             {
-                Console.SetCursorPosition(width - 1, i);
+                Console.SetCursorPosition(widthInside + 1, i);
                 Console.Write('#');
             }
+
+            Console.ResetColor();
         }
 
+        public void SpawnSnake(int column, int row)
+        {
+            Console.SetCursorPosition(column, row);
+            Console.ResetColor();
+            Console.BackgroundColor = ConsoleColor.Green;
+            Console.Write(' ');
+        }
+
+        public void ControlSnake(ref int snakeCol, ref int snakeRow, int heightInside)
+        {
+            int tempCol = 0, tempRow = 0;
+
+            ConsoleKeyInfo keyInfo = Console.ReadKey();
+
+            Console.SetCursorPosition(snakeCol, snakeRow);
+            Console.BackgroundColor = ConsoleColor.Black;
+            Console.Write(' ');
+
+            switch (keyInfo.Key)
+            {
+                case ConsoleKey.UpArrow:
+                    tempRow = snakeRow - 1;
+                    tempCol = snakeCol;
+                    break;
+                case ConsoleKey.DownArrow:
+                    tempRow = snakeRow + 1;
+                    tempCol = snakeCol;
+                    break;
+                case ConsoleKey.LeftArrow:
+                    tempRow = snakeRow;
+                    tempCol = snakeCol - 1;
+                    break;
+                case ConsoleKey.RightArrow:
+                    tempRow = snakeRow;
+                    tempCol = snakeCol + 1;
+                    break;
+            }
+            
+            snakeCol = tempCol;
+            snakeRow = tempRow;
+            SpawnSnake(snakeCol, snakeRow);
+            Console.SetCursorPosition(0, heightInside + 2);
+        }
+
+        public void SpawnFood((int, int) foodPosition)
+        {
+            int column = foodPosition.Item1, row = foodPosition.Item2;
+            Console.SetCursorPosition(column, row);
+            Console.ResetColor();
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.Write('O');
+        }
+
+        public (int, int) RandomFoodPosition(int widthInside, int heightInside, int snakeCol, int snakeRow)
+            //index cot, index hang
+        {
+            (int, int) foodPos = (1, 1);
+            while (foodPos.Item1 == snakeCol && foodPos.Item2 == snakeRow)
+            {
+                foodPos.Item1 = random.Next(1, widthInside);
+                foodPos.Item2 = random.Next(1, heightInside);
+            }
+            return foodPos;
+        }
 
         private void DrawBound(int width, int height)
         {
@@ -73,31 +139,16 @@ namespace Ass6_Aug30
         {
             throw new NotImplementedException();
         }
+    }
 
-        public void SpawnFood()
-        {
+    class Snake
+    {
+        private int indexRow;
+        private int indexColumn;
+        private int score;
 
-        }
-
-        public void ControlSnake()
-        {
-            ConsoleKeyInfo keyInfo = Console.ReadKey();
-            if (keyInfo.Key == ConsoleKey.UpArrow)
-            {
-                // Di chuyển đối tượng lên trên
-            }
-            else if (keyInfo.Key == ConsoleKey.DownArrow)
-            {
-                // Di chuyển đối tượng xuống dưới
-            }
-            else if (keyInfo.Key == ConsoleKey.LeftArrow)
-            {
-                // Di chuyển đối tượng sang trái
-            }
-            else if (keyInfo.Key == ConsoleKey.RightArrow)
-            {
-                // Di chuyển đối tượng sang phải
-            }
-        }
+        public int IndexRow { get; set; } = 1;
+        public int IndexColumn { get; set; } = 1;
+        public int Score { get; set; } = 0;
     }
 }
