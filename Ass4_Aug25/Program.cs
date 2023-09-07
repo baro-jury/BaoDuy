@@ -127,9 +127,9 @@ class Program
         int n = array.Length;
 
         Console.WriteLine("\n=> Initial element list: ");
-        for (int j = 0; j < array.Length; j++)
+        for (int i = 0; i < n; i++)
         {
-            Console.Write(array[j] + "\t");
+            Console.Write(array[i] + "\t");
         }
         Console.WriteLine("\n");
         #endregion
