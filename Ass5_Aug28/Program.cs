@@ -4,9 +4,9 @@ class Program
 {
     private static void Main(string[] args)
     {
-        ConvertTemperature();
+        //ConvertTemperature();
         Console.WriteLine("-------------------------------");
-        FindMinValueInArray();
+        //FindMinValueInArray();
         Console.WriteLine("-------------------------------");
         RemoveElementFromArray();
         Console.WriteLine("-------------------------------");
@@ -93,32 +93,47 @@ class Program
         int n = array.Length;
 
         Console.WriteLine("\n=> Initial element list: ");
-        for (int j = 0; j < array.Length; j++)
+        for (int i = 0; i < n; i++)
         {
-            Console.Write(array[j] + "\t");
+            Console.Write(array[i] + "\t");
         }
         Console.WriteLine("\n");
         #endregion
 
-        #region Thực hiện chèn phần tử X ở vị trí index vào mảng
-        Console.Write("Enter the element to add: ");
+        #region Nếu phần tử X có xuất hiện, thực hiện xoá X ở vị trí index khỏi mảng
+        Console.Write("Enter the element to remove: ");
         int x = GetInteger(int.MinValue, int.MaxValue, "Enter again!");
-        Console.Write("Enter the index to add (1 - " + (n - 2) + "): ");
-        int index = GetInteger(1, n - 2, "Enter again!");
-
-        Array.Resize(ref array, array.Length + 1);
-        for (int j = array.Length - 1; j > index; j--)
+        int index = 0;
+        bool isExisted = false;
+        for (int i = 0; i < n; i++)
         {
-            array[j] = array[j - 1];
+            if (array[i] == x)
+            {
+                isExisted = true;
+                index = i;
+                break;
+            }
         }
-        array[index] = x;
 
-        Console.WriteLine("=> Element list after adding: ");
-        for (int j = 0; j < array.Length; j++)
+        if (isExisted)
         {
-            Console.Write(array[j] + "\t");
+            for (int i = index; i < (n - 1); i++)
+            {
+                array[i] = array[i + 1];
+            }
+            Array.Resize(ref array, n - 1);
+
+            Console.WriteLine("=> Element list after removing: ");
+            for (int i = 0; i < array.Length; i++)
+            {
+                Console.Write(array[i] + "\t");
+            }
+            Console.WriteLine();
         }
-        Console.WriteLine();
+        else
+        {
+            Console.WriteLine("=> This element is not existed!");
+        }
         #endregion
     }
 
