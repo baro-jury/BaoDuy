@@ -11,10 +11,10 @@
 
     public static void DesignMenu()
     {
+        int choice;
         bool isRunning = true;
         while (isRunning)
         {
-            int choice;
             Console.WriteLine("====== Menu ======");
             Console.WriteLine("1. Draw the triangle");
             Console.WriteLine("2. Draw the square");
