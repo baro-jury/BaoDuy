@@ -47,6 +47,15 @@ namespace Ass6_Aug30
             Console.ResetColor();
         }
 
+        public (int, int) RandomSnakePosition(int widthInside, int heightInside)
+        //index cot, index hang
+        {
+            (int, int) snakePosition;
+            snakePosition.Item1 = random.Next(1, widthInside);
+            snakePosition.Item2 = random.Next(1, heightInside);
+            return snakePosition;
+        }
+
         public void SpawnSnake(int column, int row)
         {
             Console.SetCursorPosition(column, row);
@@ -84,10 +93,22 @@ namespace Ass6_Aug30
                     tempCol = snakeCol + 1;
                     break;
             }
-            
+
             snakeCol = tempCol;
             snakeRow = tempRow;
             SpawnSnake(snakeCol, snakeRow);
+        }
+
+        public (int, int) RandomFoodPosition(int widthInside, int heightInside, int snakeCol, int snakeRow)
+        //index cot, index hang
+        {
+            (int, int) foodPosition = (1, 1);
+            while (foodPosition.Item1 == snakeCol && foodPosition.Item2 == snakeRow)
+            {
+                foodPosition.Item1 = random.Next(1, widthInside);
+                foodPosition.Item2 = random.Next(1, heightInside);
+            }
+            return foodPosition;
         }
 
         public void SpawnFood((int, int) foodPosition)
@@ -98,56 +119,12 @@ namespace Ass6_Aug30
             Console.ForegroundColor = ConsoleColor.Red;
             Console.Write('O');
         }
-
-        public (int, int) RandomFoodPosition(int widthInside, int heightInside, int snakeCol, int snakeRow)
-            //index cot, index hang
-        {
-            (int, int) foodPos = (1, 1);
-            while (foodPos.Item1 == snakeCol && foodPos.Item2 == snakeRow)
-            {
-                foodPos.Item1 = random.Next(1, widthInside);
-                foodPos.Item2 = random.Next(1, heightInside);
-            }
-            return foodPos;
-        }
-
-        private void DrawBound(int width, int height)
-        {
-            //draw top
-            for (int i = 0; i < width; i++)
-            {
-                DrawAt(1, 0, '#');
-            }
-
-            //draw bottom
-            for (int i = 0; i < width; i++)
-            {
-                DrawAt(i, height - 1, '#');
-            }
-
-            //draw left
-            for (int i = 1; i < height; i++)
-            {
-                DrawAt(0, 1, '#');
-            }
-
-
-        }
-
-        private void DrawAt(int v1, int v2, char v3)
-        {
-            throw new NotImplementedException();
-        }
     }
 
     class Snake
     {
-        private int indexRow;
-        private int indexColumn;
         private int score;
 
-        public int IndexRow { get; set; } = 1;
-        public int IndexColumn { get; set; } = 1;
         public int Score { get; set; } = 0;
     }
 }

@@ -16,7 +16,9 @@ class Program
         //int heightInside = 8;
         snakeLite.CreateMap(widthInside, heightInside);
 
-        int snakePosRow = 1, snakePosCol = 1;
+        (int, int) snakePos = snakeLite.RandomSnakePosition(widthInside, heightInside);
+        int snakePosCol = snakePos.Item1, 
+            snakePosRow = snakePos.Item2;
 
         (int, int) foodPos = snakeLite.RandomFoodPosition(widthInside, heightInside, snakePosCol, snakePosRow);
 
