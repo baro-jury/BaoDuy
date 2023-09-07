@@ -140,17 +140,17 @@ class Program
         Console.Write("Enter the index to add (1 - " + (n - 2) + "): ");
         int index = GetInteger(1, n - 2, "Enter again!");
 
-        Array.Resize(ref array, array.Length + 1);
-        for (int j = array.Length - 1; j > index; j--)
+        Array.Resize(ref array, n + 1);
+        for (int i = n - 1; i > index; i--)
         {
-            array[j] = array[j - 1];
+            array[i] = array[n - 1];
         }
         array[index] = x;
 
         Console.WriteLine("=> Element list after adding: ");
-        for (int j = 0; j < array.Length; j++)
+        for (int i = 0; i < n; i++)
         {
-            Console.Write(array[j] + "\t");
+            Console.Write(array[i] + "\t");
         }
         Console.WriteLine();
         #endregion
