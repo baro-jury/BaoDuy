@@ -4,9 +4,9 @@ class Program
 {
     private static void Main(string[] args)
     {
-        //ConvertTemperature();
+        ConvertTemperature();
         Console.WriteLine("-------------------------------");
-        //FindMinValueInArray();
+        FindMinValueInArray();
         Console.WriteLine("-------------------------------");
         RemoveElementFromArray();
         Console.WriteLine("-------------------------------");
@@ -100,7 +100,7 @@ class Program
         Console.WriteLine("\n");
         #endregion
 
-        #region Nếu phần tử X có xuất hiện, thực hiện xoá X ở vị trí index khỏi mảng
+        #region Nếu phần tử X có trong mảng, thực hiện xoá X ở vị trí index khỏi mảng
         Console.Write("Enter the element to remove: ");
         int x = GetInteger(int.MinValue, int.MaxValue, "Enter again!");
         int index = 0;
@@ -139,7 +139,21 @@ class Program
 
     public static void CountOccurrencesOfCharacter()
     {
+        Console.Write("Enter string: ");
+        string str = Console.ReadLine();
+        Console.Write("Enter character to count: ");
+        char character = Console.ReadKey().KeyChar;
+        Console.WriteLine();
 
+        int count = 0;
+        foreach (char c in str)
+        {
+            if (c == character)
+            {
+                count++;
+            }
+        }
+        Console.WriteLine($"=> The character '{character}' appears in the string {count} time(s).");
     }
 
     private static int[] InstantiateArray()
