@@ -64,7 +64,7 @@ class Program
         SelectionSort(arr);
         stopwatch.Stop();
 
-        Console.WriteLine($"The selection sort algorithm takes {stopwatch.GetElapsedTime()} ms to execute.");
+        Console.WriteLine($"The selection sort algorithm for 100,000 numbers takes {stopwatch.GetElapsedTime()} ms to execute.");
     }
     private static int[] InstantiateArray(int size)
     {
