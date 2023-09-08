@@ -1,0 +1,15 @@
+D:\BaoDuy\Unity\_CodeGym\BaoDuy\Ass8_Sep08\bin\Debug\net6.0\Ass8_Sep08.exe
+D:\BaoDuy\Unity\_CodeGym\BaoDuy\Ass8_Sep08\bin\Debug\net6.0\Ass8_Sep08.deps.json
+D:\BaoDuy\Unity\_CodeGym\BaoDuy\Ass8_Sep08\bin\Debug\net6.0\Ass8_Sep08.runtimeconfig.json
+D:\BaoDuy\Unity\_CodeGym\BaoDuy\Ass8_Sep08\bin\Debug\net6.0\Ass8_Sep08.dll
+D:\BaoDuy\Unity\_CodeGym\BaoDuy\Ass8_Sep08\bin\Debug\net6.0\Ass8_Sep08.pdb
+D:\BaoDuy\Unity\_CodeGym\BaoDuy\Ass8_Sep08\obj\Debug\net6.0\Ass8_Sep08.csproj.AssemblyReference.cache
+D:\BaoDuy\Unity\_CodeGym\BaoDuy\Ass8_Sep08\obj\Debug\net6.0\Ass8_Sep08.GeneratedMSBuildEditorConfig.editorconfig
+D:\BaoDuy\Unity\_CodeGym\BaoDuy\Ass8_Sep08\obj\Debug\net6.0\Ass8_Sep08.AssemblyInfoInputs.cache
+D:\BaoDuy\Unity\_CodeGym\BaoDuy\Ass8_Sep08\obj\Debug\net6.0\Ass8_Sep08.AssemblyInfo.cs
+D:\BaoDuy\Unity\_CodeGym\BaoDuy\Ass8_Sep08\obj\Debug\net6.0\Ass8_Sep08.csproj.CoreCompileInputs.cache
+D:\BaoDuy\Unity\_CodeGym\BaoDuy\Ass8_Sep08\obj\Debug\net6.0\Ass8_Sep08.dll
+D:\BaoDuy\Unity\_CodeGym\BaoDuy\Ass8_Sep08\obj\Debug\net6.0\refint\Ass8_Sep08.dll
+D:\BaoDuy\Unity\_CodeGym\BaoDuy\Ass8_Sep08\obj\Debug\net6.0\Ass8_Sep08.pdb
+D:\BaoDuy\Unity\_CodeGym\BaoDuy\Ass8_Sep08\obj\Debug\net6.0\Ass8_Sep08.genruntimeconfig.cache
+D:\BaoDuy\Unity\_CodeGym\BaoDuy\Ass8_Sep08\obj\Debug\net6.0\ref\Ass8_Sep08.dll
