@@ -10,9 +10,9 @@ class Program
         Console.WriteLine("-------------------------------");
         //TestStaticMethod();
         Console.WriteLine("-------------------------------");
-        CreateFan();
+        //CreateFan();
         Console.WriteLine("-------------------------------");
-        //CreateStopWatch();
+        CreateStopWatch();
 
     }
 
@@ -57,7 +57,46 @@ class Program
 
     public static void CreateStopWatch()
     {
-        Cat cat = new Cat("20kg", "1.5", "Kitty");
-        cat.PrintInfo();
+        int[] arr = InstantiateArray(100000);
+        StopWatch stopwatch = new StopWatch();
+
+        stopwatch.Start();
+        SelectionSort(arr);
+        stopwatch.Stop();
+
+        Console.WriteLine($"The selection sort algorithm takes {stopwatch.GetElapsedTime()} ms to execute.");
+    }
+    private static int[] InstantiateArray(int size)
+    {
+        Random random = new Random();
+        int[] arr = new int[size];
+
+        for (int i = 0; i < size; i++)
+        {
+            arr[i] = random.Next(1, 1000000);
+        }
+
+        return arr;
+    }
+    private static void SelectionSort(int[] arr)
+    {
+        int n = arr.Length;
+
+        for (int i = 0; i < n - 1; i++)
+        {
+            int minIndex = i;
+
+            for (int j = i + 1; j < n; j++)
+            {
+                if (arr[j] < arr[minIndex])
+                {
+                    minIndex = j;
+                }
+            }
+
+            int temp = arr[i];
+            arr[i] = arr[minIndex];
+            arr[minIndex] = temp;
+        }
     }
 }
