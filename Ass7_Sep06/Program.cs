@@ -4,13 +4,13 @@ class Program
 {
     private static void Main(string[] args)
     {
-        //CreateRectangle();
+        CreateRectangle();
         Console.WriteLine("-------------------------------");
-        //CreateAnimal();
+        CreateAnimal();
         Console.WriteLine("-------------------------------");
-        //TestStaticMethod();
+        TestStaticMethod();
         Console.WriteLine("-------------------------------");
-        //CreateFan();
+        CreateFan();
         Console.WriteLine("-------------------------------");
         CreateStopWatch();
 
