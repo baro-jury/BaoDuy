@@ -7,9 +7,9 @@ class Program
     {
         Console.Title = "Snake Lite";
 
-        Console.Write("Enter width (at least 10): ");
+        Console.Write("Enter the width of map (at least 10): ");
         int widthInside = GetInteger(10, int.MaxValue, "Enter again!");
-        Console.Write("Enter height (at least 5): ");
+        Console.Write("Enter the height of map (at least 5): ");
         int heightInside = GetInteger(5, int.MaxValue, "Enter again!");
 
         //int widthInside = 20;
