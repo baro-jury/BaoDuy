@@ -1,5 +1,4 @@
 ﻿using Ass8_Sep08;
-using System;
 
 class Program
 {
