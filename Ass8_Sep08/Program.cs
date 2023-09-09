@@ -5,11 +5,11 @@ class Program
 {
     private static void Main(string[] args)
     {
-        //CreateShapes();
+        CreateShapes();
         Console.WriteLine("-------------------------------");
-        //CreateCircle();
+        CreateCircle();
         Console.WriteLine("-------------------------------");
-        //CreatePoint2D();
+        CreatePoint2D();
     }
 
     public static void CreateShapes()
@@ -60,25 +60,14 @@ class Program
 
     public static void CreatePoint2D()
     {
-        Circle circle = new Circle();
-        Console.WriteLine(circle);
-        circle = new Circle(3.5);
-        Console.WriteLine(circle);
-        circle = new Circle(3.5, "indigo", false);
-        Console.WriteLine(circle);
+        Point2D point2D = new Point2D();
+        Console.WriteLine(point2D);
+        point2D = new Point2D(3.1f, 11.5f);
+        Console.WriteLine(point2D + "\n");
         //-------------------------------
-        Rectangle rectangle = new Rectangle();
-        Console.WriteLine(rectangle);
-        rectangle = new Rectangle(2.3, 5.8);
-        Console.WriteLine(rectangle);
-        rectangle = new Rectangle(2.5, 3.8, "orange", true);
-        Console.WriteLine(rectangle);
-        //-------------------------------
-        Square square = new Square();
-        Console.WriteLine(square);
-        square = new Square(2.3);
-        Console.WriteLine(square);
-        square = new Square(5.8, "yellow", true);
-        Console.WriteLine(square);
+        Point3D point3D = new Point3D();
+        Console.WriteLine(point3D);
+        point3D = new Point3D(2, 3, 5);
+        Console.WriteLine(point3D);
     }
 }
