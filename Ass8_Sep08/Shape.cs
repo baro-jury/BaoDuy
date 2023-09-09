@@ -32,11 +32,8 @@ namespace Ass8_Sep08
 
     public class Rectangle : Shape
     {
-        private double width = 1.0;
-        private double length = 1.0;
-
-        public double Width { get; set; }
-        public double Length { get; set; }
+        public double Width { get; set; } = 1.0;
+        public double Length { get; set; } = 1.0;
 
         public Rectangle() { }
 
