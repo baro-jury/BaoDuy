@@ -5,14 +5,14 @@ class Program
 {
     private static void Main(string[] args)
     {
-        CreateAnimals();
+        PracticeAbstractAndInterface();
         Console.WriteLine("-------------------------------");
         //CreateCircle();
         Console.WriteLine("-------------------------------");
         //CreatePoint2D();
     }
 
-    public static void CreateAnimals()
+    public static void PracticeAbstractAndInterface()
     {
         Animal[] animals = new Animal[2];
         animals[0] = new Tiger();
