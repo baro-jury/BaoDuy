@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "Ass8_Sep08/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Ass8_Sep08.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Ass8_Sep08.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Ass8_Sep08/1.0.0": {
+      "type": "project",
+      "path": "../Ass8_Sep08/Ass8_Sep08.csproj",
+      "msbuildProject": "../Ass8_Sep08/Ass8_Sep08.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "Ass8_Sep08 >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Admin\\.nuget\\packages\\": {}
@@ -33,7 +52,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\BaoDuy\\Unity\\_CodeGym\\BaoDuy\\Ass8_Sep08\\Ass8_Sep08.csproj": {
+              "projectPath": "D:\\BaoDuy\\Unity\\_CodeGym\\BaoDuy\\Ass8_Sep08\\Ass8_Sep08.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

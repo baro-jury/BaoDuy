@@ -1,13 +1,12 @@
-﻿using Ass9;
-using System;
+﻿using Ass9_Sep11;
 
 class Program
 {
     private static void Main(string[] args)
     {
-        PracticeAbstractAndInterface();
+        //PracticeAbstractAndInterface();
         Console.WriteLine("-------------------------------");
-        //CreateCircle();
+        CreateComparableCircle();
         Console.WriteLine("-------------------------------");
         //CreatePoint2D();
     }
@@ -35,6 +34,28 @@ class Program
         foreach (Fruit fruit in fruits)
         {
             Console.WriteLine(fruit.HowToEat());
+        }
+    }
+
+    public static void CreateComparableCircle()
+    {
+        ComparableCircle[] circles = new ComparableCircle[3];
+        circles[0] = new ComparableCircle(3.6);
+        circles[1] = new ComparableCircle();
+        circles[2] = new ComparableCircle(3.5, "indigo", false);
+
+        Console.WriteLine("Pre-sorted:");
+        foreach (ComparableCircle circle in circles)
+        {
+            Console.WriteLine(circle);
+        }
+
+        Array.Sort(circles);
+
+        Console.WriteLine("\nAfter-sorted:");
+        foreach (ComparableCircle circle in circles)
+        {
+            Console.WriteLine(circle);
         }
     }
 }

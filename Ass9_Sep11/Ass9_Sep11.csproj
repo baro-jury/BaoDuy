@@ -7,4 +7,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Ass8_Sep08\Ass8_Sep08.csproj" />
+  </ItemGroup>
+
 </Project>

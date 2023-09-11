@@ -1,4 +1,4 @@
-﻿namespace Ass9
+﻿namespace Ass9_Sep11
 {
     public interface Edible
     {
