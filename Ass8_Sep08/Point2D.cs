@@ -8,8 +8,8 @@ namespace Ass8_Sep08
 {
     public class Point2D
     {
-        public float X { get; set; }
-        public float Y { get; set; }
+        public float X { get; set; } = 0;
+        public float Y { get; set; } = 0;
 
         public Point2D() { }
 
@@ -38,7 +38,7 @@ namespace Ass8_Sep08
 
     public class Point3D : Point2D
     {
-        public float Z { get; set; }
+        public float Z { get; set; } = 0;
 
         public Point3D() { }
 
