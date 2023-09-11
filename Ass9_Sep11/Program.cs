@@ -1,4 +1,5 @@
-﻿using Ass9_Sep11;
+﻿using Ass8_Sep08;
+using Ass9_Sep11;
 
 class Program
 {
@@ -6,9 +7,9 @@ class Program
     {
         //PracticeAbstractAndInterface();
         Console.WriteLine("-------------------------------");
-        CreateComparableCircle();
+        //CreateComparableCircle();
         Console.WriteLine("-------------------------------");
-        //CreatePoint2D();
+        CreateCircleComparer();
     }
 
     public static void PracticeAbstractAndInterface()
@@ -54,6 +55,29 @@ class Program
 
         Console.WriteLine("\nAfter-sorted:");
         foreach (ComparableCircle circle in circles)
+        {
+            Console.WriteLine(circle);
+        }
+    }
+
+    public static void CreateCircleComparer()
+    {
+        Circle[] circles = new Circle[3];
+        circles[0] = new Circle(3.6);
+        circles[1] = new Circle();
+        circles[2] = new Circle(3.5, "indigo", false);
+
+        Console.WriteLine("Pre-sorted:");
+        foreach (Circle circle in circles)
+        {
+            Console.WriteLine(circle);
+        }
+
+        IComparer<Circle> circleComparer = new CircleComparer();
+        Array.Sort(circles, circleComparer);
+
+        Console.WriteLine("\nAfter-sorted:");
+        foreach (Circle circle in circles)
         {
             Console.WriteLine(circle);
         }
