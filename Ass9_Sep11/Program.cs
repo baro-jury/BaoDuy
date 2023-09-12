@@ -11,7 +11,7 @@ class Program
         Console.WriteLine("-------------------------------");
         //CreateCircleComparer();
         Console.WriteLine("-------------------------------");
-        //CreateComparableCircle();
+        ResizeGeometry();
         Console.WriteLine("-------------------------------");
         //CreateCircleComparer();
     }
@@ -91,24 +91,22 @@ class Program
 
     public static void ResizeGeometry()
     {
-        Circle[] circles = new Circle[3];
-        circles[0] = new Circle(3.6);
-        circles[1] = new Circle();
-        circles[2] = new Circle(3.5, "indigo", false);
+        Shape[] shapes = new Shape[3];
+        shapes[0] = new CircleResizer();
+        shapes[1] = new RectangleResizer();
+        shapes[2] = new SquareResizer();
 
-        Console.WriteLine("Pre-sorted:");
-        foreach (Circle circle in circles)
+        Console.WriteLine("Pre-resized:");
+        foreach (Resizeable shape in shapes)
         {
-            Console.WriteLine(circle);
+            Console.WriteLine(shape);
+            shape.Resize(10);
         }
 
-        IComparer<Circle> circleComparer = new CircleComparer();
-        Array.Sort(circles, circleComparer);
-
-        Console.WriteLine("\nAfter-sorted:");
-        foreach (Circle circle in circles)
+        Console.WriteLine("\nAfter-resized:");
+        foreach (Resizeable shape in shapes)
         {
-            Console.WriteLine(circle);
+            Console.WriteLine(shape);
         }
     }
 }
