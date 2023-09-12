@@ -11,9 +11,9 @@ class Program
         Console.WriteLine("-------------------------------");
         //CreateCircleComparer();
         Console.WriteLine("-------------------------------");
-        //ResizeGeometry();
+        ResizeGeometry();
         Console.WriteLine("-------------------------------");
-        Icolor();
+        //GeometryColor();
     }
 
     #region Practice
@@ -116,16 +116,16 @@ class Program
         }
     }
 
-    public static void Icolor()
+    public static void GeometryColor()
     {
         Shape[] shapes = new Shape[3];
         shapes[0] = new Circle();
         shapes[1] = new Rectangle();
         shapes[2] = new SquareColor();
 
-        foreach (Resizeable shape in shapes)
+        foreach (var shape in shapes)
         {
-            Console.WriteLine(shape);
+
         }
     }
     #endregion
