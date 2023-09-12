@@ -9,9 +9,14 @@ class Program
         Console.WriteLine("-------------------------------");
         //CreateComparableCircle();
         Console.WriteLine("-------------------------------");
-        CreateCircleComparer();
+        //CreateCircleComparer();
+        Console.WriteLine("-------------------------------");
+        //CreateComparableCircle();
+        Console.WriteLine("-------------------------------");
+        //CreateCircleComparer();
     }
 
+    #region Practice
     public static void PracticeAbstractAndInterface()
     {
         Animal[] animals = new Animal[2];
@@ -61,6 +66,30 @@ class Program
     }
 
     public static void CreateCircleComparer()
+    {
+        Circle[] circles = new Circle[3];
+        circles[0] = new Circle(3.6);
+        circles[1] = new Circle();
+        circles[2] = new Circle(3.5, "indigo", false);
+
+        Console.WriteLine("Pre-sorted:");
+        foreach (Circle circle in circles)
+        {
+            Console.WriteLine(circle);
+        }
+
+        IComparer<Circle> circleComparer = new CircleComparer();
+        Array.Sort(circles, circleComparer);
+
+        Console.WriteLine("\nAfter-sorted:");
+        foreach (Circle circle in circles)
+        {
+            Console.WriteLine(circle);
+        }
+    } 
+    #endregion
+
+    public static void ResizeGeometry()
     {
         Circle[] circles = new Circle[3];
         circles[0] = new Circle(3.6);
