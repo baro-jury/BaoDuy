@@ -14,7 +14,7 @@ namespace Ass9_Sep11
 
         public void Resize(double percent)
         {
-            Radius *= (1 + percent / 100);
+            Radius *= (1 + percent);
         }
 
         public override string ToString()

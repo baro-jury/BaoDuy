@@ -11,9 +11,9 @@ class Program
         Console.WriteLine("-------------------------------");
         //CreateCircleComparer();
         Console.WriteLine("-------------------------------");
-        ResizeGeometry();
+        //ResizeGeometry();
         Console.WriteLine("-------------------------------");
-        //CreateCircleComparer();
+        Icolor();
     }
 
     #region Practice
@@ -86,27 +86,47 @@ class Program
         {
             Console.WriteLine(circle);
         }
-    } 
+    }
     #endregion
 
+    #region Exercise
     public static void ResizeGeometry()
     {
-        Shape[] shapes = new Shape[3];
+        Resizeable[] shapes = new Resizeable[3];
         shapes[0] = new CircleResizer();
         shapes[1] = new RectangleResizer();
         shapes[2] = new SquareResizer();
 
+        Random rand = new Random();
+        double[] percentage = new double[3];
+
         Console.WriteLine("Pre-resized:");
-        foreach (Resizeable shape in shapes)
+        for (int i = 0; i < shapes.Length; i++)
         {
-            Console.WriteLine(shape);
-            shape.Resize(10);
+            Console.WriteLine(shapes[i]);
+            percentage[i] = rand.Next(1, 101) / 100.0;
+            shapes[i].Resize(percentage[i]);
         }
 
         Console.WriteLine("\nAfter-resized:");
+        for (int i = 0; i < shapes.Length; i++)
+        {
+            Console.WriteLine(shapes[i] +
+                ", with an increase rate of " + (percentage[i] * 100) + "%");
+        }
+    }
+
+    public static void Icolor()
+    {
+        Shape[] shapes = new Shape[3];
+        shapes[0] = new Circle();
+        shapes[1] = new Rectangle();
+        shapes[2] = new SquareColor();
+
         foreach (Resizeable shape in shapes)
         {
             Console.WriteLine(shape);
         }
     }
+    #endregion
 }
