@@ -32,11 +32,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\BaoDuy\\Unity\\_CodeGym\\BaoDuy\\Ass9_Sep11\\Ass9_Sep11.csproj",
+      "projectUniqueName": "D:\\BaoDuy\\.Unity\\_CodeGym\\BaoDuy\\Ass9_Sep11\\Ass9_Sep11.csproj",
       "projectName": "Ass9_Sep11",
-      "projectPath": "D:\\BaoDuy\\Unity\\_CodeGym\\BaoDuy\\Ass9_Sep11\\Ass9_Sep11.csproj",
+      "projectPath": "D:\\BaoDuy\\.Unity\\_CodeGym\\BaoDuy\\Ass9_Sep11\\Ass9_Sep11.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "D:\\BaoDuy\\Unity\\_CodeGym\\BaoDuy\\Ass9_Sep11\\obj\\",
+      "outputPath": "D:\\BaoDuy\\.Unity\\_CodeGym\\BaoDuy\\Ass9_Sep11\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -53,8 +53,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\BaoDuy\\Unity\\_CodeGym\\BaoDuy\\Ass8_Sep08\\Ass8_Sep08.csproj": {
-              "projectPath": "D:\\BaoDuy\\Unity\\_CodeGym\\BaoDuy\\Ass8_Sep08\\Ass8_Sep08.csproj"
+            "D:\\BaoDuy\\.Unity\\_CodeGym\\BaoDuy\\Ass8_Sep08\\Ass8_Sep08.csproj": {
+              "projectPath": "D:\\BaoDuy\\.Unity\\_CodeGym\\BaoDuy\\Ass8_Sep08\\Ass8_Sep08.csproj"
             }
           }
         }
