@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\BaoDuy\\Unity\\_CodeGym\\BaoDuy\\Ass10_Sep13\\Ass10_Sep13.csproj",
+      "projectUniqueName": "D:\\BaoDuy\\.Unity\\_CodeGym\\BaoDuy\\Ass10_Sep13\\Ass10_Sep13.csproj",
       "projectName": "Ass10_Sep13",
-      "projectPath": "D:\\BaoDuy\\Unity\\_CodeGym\\BaoDuy\\Ass10_Sep13\\Ass10_Sep13.csproj",
+      "projectPath": "D:\\BaoDuy\\.Unity\\_CodeGym\\BaoDuy\\Ass10_Sep13\\Ass10_Sep13.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "D:\\BaoDuy\\Unity\\_CodeGym\\BaoDuy\\Ass10_Sep13\\obj\\",
+      "outputPath": "D:\\BaoDuy\\.Unity\\_CodeGym\\BaoDuy\\Ass10_Sep13\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
