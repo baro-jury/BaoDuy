@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\BaoDuy\\Unity\\_CodeGym\\BaoDuy\\Ass5_Aug28\\Ass5_Aug28.csproj": {}
+    "D:\\BaoDuy\\.Unity\\_CodeGym\\BaoDuy\\Ass5_Aug28\\Ass5_Aug28.csproj": {}
   },
   "projects": {
-    "D:\\BaoDuy\\Unity\\_CodeGym\\BaoDuy\\Ass5_Aug28\\Ass5_Aug28.csproj": {
+    "D:\\BaoDuy\\.Unity\\_CodeGym\\BaoDuy\\Ass5_Aug28\\Ass5_Aug28.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\BaoDuy\\Unity\\_CodeGym\\BaoDuy\\Ass5_Aug28\\Ass5_Aug28.csproj",
+        "projectUniqueName": "D:\\BaoDuy\\.Unity\\_CodeGym\\BaoDuy\\Ass5_Aug28\\Ass5_Aug28.csproj",
         "projectName": "Ass5_Aug28",
-        "projectPath": "D:\\BaoDuy\\Unity\\_CodeGym\\BaoDuy\\Ass5_Aug28\\Ass5_Aug28.csproj",
+        "projectPath": "D:\\BaoDuy\\.Unity\\_CodeGym\\BaoDuy\\Ass5_Aug28\\Ass5_Aug28.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\BaoDuy\\Unity\\_CodeGym\\BaoDuy\\Ass5_Aug28\\obj\\",
+        "outputPath": "D:\\BaoDuy\\.Unity\\_CodeGym\\BaoDuy\\Ass5_Aug28\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
