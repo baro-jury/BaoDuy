@@ -1,5 +1,4 @@
 ﻿using Ass4_Aug25;
-using System.Data.Common;
 
 class Program
 {
