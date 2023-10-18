@@ -9,84 +9,88 @@ namespace Ass12_Sep18
     public class Player
     {
         public string Name { get; set; }
+        public char Faction { get; set; }
 
         public virtual void TakeTurn(Board board) { }
 
-        public static int GetInteger(int min, int max, string errorMsg)
+        public override string? ToString()
         {
-            while (true)
-            {
-                try
-                {
-                    int number = int.Parse(Console.ReadLine());
-                    if (number < min || number > max)
-                    {
-                        throw new ArgumentOutOfRangeException();
-                    }
-                    else return number;
-                }
-                catch (ArgumentOutOfRangeException aoore)
-                {
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("Out of range!");
-                    Console.ResetColor();
-                }
-                catch (Exception ex)
-                {
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine(errorMsg);
-                    Console.ResetColor();
-                }
-            }
+            return Name + " - " + Faction;
         }
     }
 
     public class HumanPlayer : Player
     {
+        public HumanPlayer(string name, char faction)
+        {
+            Name = name;
+            Faction = faction;
+        }
+
         public override void TakeTurn(Board board)
         {
+            bool turnCompleted = false;
+
             // Hiển thị bảng cờ
-            board.Draw();
+            board.Display();
 
             // Nhập vào tọa độ ô người chơi muốn đánh
-            Console.Write("Nhập hàng: ");
-            int row = GetInteger(0, 2, "Enter again!");
-            Console.Write("Nhập cột: ");
-            int col = GetInteger(0, 2, "Enter again!");
+            Console.WriteLine($"=> Lượt của {Name}: Hãy chọn vị trí đánh cờ");
 
-            // Kiểm tra tọa độ hợp lệ
-            if (row >= 0 && row < 3 && col >= 0 && col < 3
-                && board.squares[row, col] == ' ')
+            while (!turnCompleted)
             {
+                Console.Write("Hàng thứ ");
+                int row = Program.GetInteger(1, 3, "Nhập lại!");
+                Console.Write("Cột thứ ");
+                int col = Program.GetInteger(1, 3, "Nhập lại!");
 
-                // Đánh dấu ô đã đánh
-                board.squares[row, col] = board.PLAYER_FACTION;
-            }
-            else
-            {
-                Console.WriteLine("Ô đã được đánh hoặc tọa độ không hợp lệ!");
+                int indexRow = row - 1, indexCol = col - 1;
+                // Kiểm tra tọa độ hợp lệ
+                if (board.Squares[indexRow, indexCol] == ' ')
+                {
+                    // Đánh dấu ô đã đánh
+                    board.Squares[indexRow, indexCol] = Faction;
+                    turnCompleted = true;
+                    Console.Clear();
+                }
+                else
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Ô đã được đánh, xin mời đánh lại!");
+                    Console.ResetColor();
+                }
             }
         }
     }
 
     public class ComputerPlayer : Player
     {
+        public ComputerPlayer(char faction)
+        {
+            Name = "AI";
+            Faction = faction;
+        }
+
         public override void TakeTurn(Board board)
         {
-            // Sinh tọa độ ngẫu nhiên 
-            Random rnd = new Random();
-            int row = rnd.Next(0, 3);
-            int col = rnd.Next(0, 3);
-
-            while (board.squares[row, col] != ' ')
+            if (!board.IsFull)
             {
-                // Sinh lại nếu trùng ô đã đánh
-                row = rnd.Next(0, 3);
-                col = rnd.Next(0, 3);
+                // Sinh tọa độ ngẫu nhiên 
+                Random rnd = new Random();
+                int row = rnd.Next(0, 3);
+                int col = rnd.Next(0, 3);
+
+                while (board.Squares[row, col] != ' ')
+                {
+                    // Sinh lại nếu trùng ô đã đánh
+                    row = rnd.Next(0, 3);
+                    col = rnd.Next(0, 3);
+                }
+
+                // Đánh dấu ô máy chọn
+                board.Squares[row, col] = Faction;
             }
 
-            // Đánh dấu ô máy chọn
-            board.squares[row, col] = board.COMPUTER_FACTION;
         }
     }
 }
